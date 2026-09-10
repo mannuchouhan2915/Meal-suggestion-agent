@@ -1,0 +1,205 @@
+.recommendations-page {
+  min-height: 100vh;
+  display: flex;
+}
+
+.recommendations-main {
+  margin-left: 265px;
+  width: calc(100% - 265px);
+  min-height: 100vh;
+  padding: 40px 60px;
+  background: #f8faf9;
+  box-sizing: border-box;
+}
+
+.recommendations-header span {
+  font-size: 12px;
+  font-weight: 700;
+  color: #087f5b;
+  letter-spacing: 1px;
+}
+
+.recommendations-header h1 {
+  margin: 8px 0;
+  font-size: 32px;
+  color: #073b3a;
+}
+
+.recommendations-header p {
+  margin: 0;
+  color: #71817d;
+}
+
+.recommendation-tools {
+  margin-top: 32px;
+}
+
+.search-box {
+  max-width: 600px;
+  background: white;
+  border: 1px solid #dfe9e4;
+  border-radius: 12px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.filter-buttons button {
+  border: 1px solid #dfe9e4;
+  background: white;
+  color: #52635f;
+  padding: 9px 17px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.filter-buttons button.active {
+  background: #087f5b;
+  color: white;
+  border-color: #087f5b;
+}
+
+.all-meals-section {
+  margin-top: 42px;
+  padding-bottom: 50px;
+}
+
+.all-meals-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 20px;
+}
+
+.all-meals-heading span {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #087f5b;
+}
+
+.all-meals-heading h2 {
+  margin: 6px 0 0;
+  font-size: 23px;
+  color: #073b3a;
+}
+
+.all-meals-heading p {
+  margin: 0;
+  font-size: 13px;
+  color: #71817d;
+}
+
+.recommendation-meal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.recommendation-meal-card {
+  background: white;
+  border: 1px solid #dfe9e4;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: 0.2s ease;
+}
+
+.recommendation-meal-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 60, 50, 0.08);
+}
+
+.recommendation-meal-image {
+  height: 190px;
+  background: #e7f3ec;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recommendation-meal-emoji {
+  font-size: 72px;
+}
+
+.recommendation-meal-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: white;
+  color: #087f5b;
+  padding: 6px 11px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.recommendation-save-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  color: #087f5b;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.recommendation-meal-info {
+  padding: 20px;
+}
+
+.recommendation-meal-cuisine {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #71817d;
+}
+
+.recommendation-meal-info h3 {
+  margin: 7px 0 14px;
+  font-size: 18px;
+  color: #073b3a;
+}
+
+.recommendation-meal-meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: #71817d;
+  margin-bottom: 18px;
+}
+
+.recommendation-view-button {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #cfe1d9;
+  border-radius: 8px;
+  background: white;
+  color: #087f5b;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.recommendation-view-button:hover {
+  background: #f1f8f4;
+}

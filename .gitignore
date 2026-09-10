@@ -1,0 +1,29 @@
+# React / Vite
+frontend/node_modules/
+frontend/dist/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large datasets
+data/raw/foodcom_recipes.csv
+data/raw/foodcom_reviews.csv
