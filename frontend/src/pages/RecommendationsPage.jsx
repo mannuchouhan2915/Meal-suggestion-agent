@@ -1,10 +1,10 @@
-import meals from "../data/meals";
+import { getRecommendations } from "../services/mealService";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import DashboardSidebar from "../components/DashboardSidebar";
 import "./RecommendationsPage.css";
 function RecommendationsPage() {
-    const [search, setSearch] = useState("");
+const meals = getRecommendations();    const [search, setSearch] = useState("");
     const navigate = useNavigate();
     const [selectedFilter, setSelectedFilter] = useState("All");
     const filteredMeals = meals.filter((meal) => {

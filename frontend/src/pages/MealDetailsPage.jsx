@@ -1,5 +1,5 @@
 import { useState } from "react";
-import meals from "../data/meals";
+import { getMealById } from "../services/mealService";
 import { useParams, useNavigate } from "react-router-dom";
 import DashboardSidebar from "../components/DashboardSidebar";
 import "./MealDetailsPage.css";
@@ -14,7 +14,7 @@ function MealDetailsPage() {
     });
     
 
-const meal = meals.find((item) => item.id === mealName);    
+const meal = getMealById(mealName);
 const isSaved = savedMeals.includes(mealName);
 
     const handleSaveMeal = () => {

@@ -1,4 +1,4 @@
-import meals from "../data/meals";
+import { getMealById } from "../services/mealService";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import DashboardSidebar from "../components/DashboardSidebar";
@@ -15,9 +15,7 @@ function SavedMealsPage() {
     });
 
     const savedMealDetails = savedMeals
-        .map((mealId) =>
-            meals.find((meal) => meal.id === mealId)
-        )
+        .map((mealId) => getMealById(mealId))
         .filter(Boolean);
 
     const handleRemove = (mealId) => {
