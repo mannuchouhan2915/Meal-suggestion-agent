@@ -6,6 +6,7 @@ import OnboardingPage from "./pages/OnboardingPage";
 import DashboardPage from "./pages/DashboardPage";
 import RecommendationsPage from "./pages/RecommendationsPage";
 import MealDetailsPage from "./pages/MealDetailsPage";
+import SavedMealsPage from "./pages/SavedMealsPage";
 
 
 import "./App.css";
@@ -40,6 +41,10 @@ function App() {
         <Route
           path="/meal/:mealName"
           element={<MealDetailsPage />}
+        />
+        <Route
+          path="/dashboard/saved"
+          element={<SavedMealsPage />}
         />
       </Routes>
     </BrowserRouter>

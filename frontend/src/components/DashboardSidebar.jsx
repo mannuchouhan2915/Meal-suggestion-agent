@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function DashboardSidebar() {
   return (
@@ -11,32 +11,48 @@ function DashboardSidebar() {
 
       <nav className="sidebar-nav">
 
-        <Link to="/dashboard" className="sidebar-link active">
-          <span>⌂</span>
-          Dashboard
-        </Link>
+  <NavLink
+    to="/dashboard"
+    end
+    className={({ isActive }) =>
+      isActive ? "sidebar-link active" : "sidebar-link"
+    }
+  >
+    <span>⌂</span>
+    Dashboard
+  </NavLink>
 
-        <a href="#" className="sidebar-link">
-          <span>✨</span>
-          Recommendations
-        </a>
+  <NavLink
+    to="/dashboard/recommendations"
+    className={({ isActive }) =>
+      isActive ? "sidebar-link active" : "sidebar-link"
+    }
+  >
+    <span>✨</span>
+    Recommendations
+  </NavLink>
 
-        <a href="#" className="sidebar-link">
-          <span>♡</span>
-          Saved Meals
-        </a>
+  <NavLink
+    to="/dashboard/saved"
+    className={({ isActive }) =>
+      isActive ? "sidebar-link active" : "sidebar-link"
+    }
+  >
+    <span>♡</span>
+    Saved Meals
+  </NavLink>
 
-        <a href="#" className="sidebar-link">
-          <span>📊</span>
-          My Progress
-        </a>
+  <a href="#" className="sidebar-link">
+    <span>📊</span>
+    My Progress
+  </a>
 
-        <a href="#" className="sidebar-link">
-          <span>⚙</span>
-          Preferences
-        </a>
+  <a href="#" className="sidebar-link">
+    <span>⚙</span>
+    Preferences
+  </a>
 
-      </nav>
+</nav>
 
       <div className="sidebar-bottom">
 

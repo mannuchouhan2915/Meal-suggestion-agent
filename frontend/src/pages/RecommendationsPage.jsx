@@ -1,3 +1,4 @@
+import meals from "../data/meals";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import DashboardSidebar from "../components/DashboardSidebar";
@@ -6,62 +7,6 @@ function RecommendationsPage() {
     const [search, setSearch] = useState("");
     const navigate = useNavigate();
     const [selectedFilter, setSelectedFilter] = useState("All");
-    const meals = [
-        {
-            name: "Paneer Tikka Bowl",
-            cuisine: "Indian",
-            calories: "520 kcal",
-            protein: "32g",
-            time: "25 min",
-            tag: "High Protein",
-            emoji: "🍛"
-        },
-        {
-            name: "Creamy Pesto Pasta",
-            cuisine: "Italian",
-            calories: "610 kcal",
-            protein: "21g",
-            time: "30 min",
-            tag: "Quick & Easy",
-            emoji: "🍝"
-        },
-        {
-            name: "Fresh Buddha Bowl",
-            cuisine: "Healthy",
-            calories: "440 kcal",
-            protein: "18g",
-            time: "15 min",
-            tag: "Healthy Choice",
-            emoji: "🥗"
-        },
-        {
-            name: "Chickpea Salad",
-            cuisine: "Healthy",
-            calories: "390 kcal",
-            protein: "20g",
-            time: "15 min",
-            tag: "High Protein",
-            emoji: "🥙"
-        },
-        {
-            name: "Veggie Fried Rice",
-            cuisine: "Asian",
-            calories: "480 kcal",
-            protein: "16g",
-            time: "20 min",
-            tag: "Quick & Easy",
-            emoji: "🍚"
-        },
-        {
-            name: "Masala Oats Bowl",
-            cuisine: "Indian",
-            calories: "350 kcal",
-            protein: "15g",
-            time: "10 min",
-            tag: "Healthy Choice",
-            emoji: "🥣"
-        }
-    ];
     const filteredMeals = meals.filter((meal) => {
 
         const matchesSearch =

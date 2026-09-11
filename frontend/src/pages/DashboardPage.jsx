@@ -215,18 +215,17 @@ const navigate = useNavigate();
             </div>
 
 
-            <div className="quick-card">
-              <span>♡</span>
-
-              <div>
-                <h3>View Saved Meals</h3>
-                <p>
-                  Your favorite recipes in one place.
-                </p>
-              </div>
-
-              <strong>→</strong>
-            </div>
+            <div
+  className="quick-card"
+  onClick={() => navigate("/dashboard/saved")}
+>
+  <span>♡</span>
+  <div>
+    <h3>View Saved Meals</h3>
+    <p>Your favorite recipes in one place.</p>
+  </div>
+  <strong>→</strong>
+</div>
 
           </div>
 

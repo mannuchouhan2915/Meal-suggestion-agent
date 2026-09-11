@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import meals from "../data/meals";
 import { useParams, useNavigate } from "react-router-dom";
 import DashboardSidebar from "../components/DashboardSidebar";
 import "./MealDetailsPage.css";
@@ -12,91 +12,10 @@ function MealDetailsPage() {
         const saved = localStorage.getItem("savedMeals");
         return saved ? JSON.parse(saved) : [];
     });
-    const meals = {
-        "paneer-tikka-bowl": {
-            name: "Paneer Tikka Bowl",
-            cuisine: "Indian",
-            calories: "520",
-            protein: "32g",
-            time: "25 min",
-            tag: "High Protein",
-            emoji: "🍛",
-            description:
-                "A nutritious and protein-rich bowl made with delicious paneer tikka and fresh vegetables.",
-            ingredients: [
-                "Paneer",
-                "Capsicum",
-                "Onion",
-                "Tomato",
-                "Yogurt",
-                "Indian spices"
-            ],
-            instructions: [
-                "Marinate the paneer with yogurt and spices.",
-                "Cook paneer and vegetables until golden.",
-                "Prepare the bowl with fresh vegetables.",
-                "Add the cooked paneer tikka on top.",
-                "Serve fresh and enjoy."
-            ]
-        },
+    
 
-        "creamy-pesto-pasta": {
-            name: "Creamy Pesto Pasta",
-            cuisine: "Italian",
-            calories: "610",
-            protein: "21g",
-            time: "30 min",
-            tag: "Quick & Easy",
-            emoji: "🍝",
-            description:
-                "Creamy pasta tossed with flavorful pesto and fresh ingredients for a satisfying meal.",
-            ingredients: [
-                "Pasta",
-                "Pesto sauce",
-                "Cream",
-                "Garlic",
-                "Parmesan cheese",
-                "Mixed herbs"
-            ],
-            instructions: [
-                "Boil the pasta until tender.",
-                "Prepare the creamy pesto sauce.",
-                "Add cooked pasta to the sauce.",
-                "Mix well and add parmesan cheese.",
-                "Serve warm with fresh herbs."
-            ]
-        },
-
-        "fresh-buddha-bowl": {
-            name: "Fresh Buddha Bowl",
-            cuisine: "Healthy",
-            calories: "440",
-            protein: "18g",
-            time: "15 min",
-            tag: "Healthy Choice",
-            emoji: "🥗",
-            description:
-                "A colorful and balanced bowl packed with fresh vegetables, healthy ingredients and nutrients.",
-            ingredients: [
-                "Mixed greens",
-                "Chickpeas",
-                "Carrot",
-                "Cucumber",
-                "Avocado",
-                "Lemon dressing"
-            ],
-            instructions: [
-                "Wash and prepare all vegetables.",
-                "Arrange mixed greens in a bowl.",
-                "Add chickpeas and chopped vegetables.",
-                "Top with avocado.",
-                "Drizzle with lemon dressing and serve."
-            ]
-        }
-    };
-
-    const meal = meals[mealName];
-    const isSaved = savedMeals.includes(mealName);
+const meal = meals.find((item) => item.id === mealName);    
+const isSaved = savedMeals.includes(mealName);
 
     const handleSaveMeal = () => {
         let updatedMeals;
